@@ -1,4 +1,0 @@
-tls:
-    certificates:
-        - certFile: "/etc/certs/local.cert"
-          keyFile: "/etc/certs/local.key"
