@@ -12,6 +12,7 @@ services:
             - /var/run/docker.sock:/var/run/docker.sock:ro
             - ./etc/traefik:/etc/traefik:ro
             - ./certs:/etc/certs:ro
+            - ./etc/traefik/config.yaml:/etc/certs/config/config.yaml:ro
         restart: unless-stopped
         networks:
             - public

@@ -12,7 +12,6 @@ providers:
         exposedByDefault: false
 
     file:
-        filename: /etc/traefik/config.yaml
         directory: /etc/certs/config
         watch: true
 
