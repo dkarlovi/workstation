@@ -11,8 +11,3 @@ http:
                     - main: "domain.local"
                       sans:
                           - "*.domain.local"
-
-tls:
-    certificates:
-        - certFile: "/etc/certs/local.cert"
-          keyFile: "/etc/certs/local.key"
