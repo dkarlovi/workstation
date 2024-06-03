@@ -1,6 +1,0 @@
-http:
-    routers:
-        traefik:
-            rule: "Host(`traefik.localhost`)"
-            service: "api@internal"
-            tls: true

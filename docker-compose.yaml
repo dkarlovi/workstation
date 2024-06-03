@@ -1,21 +1,9 @@
-version: "3.8"
 services:
-    traefik:
-        image: "traefik:2.4.6"
-        container_name: sigwin-traefik
-        security_opt:
-            - no-new-privileges:true
-        ports:
-            - "80:80"
-            - "443:443"
+    hostmanager:
+        image: dkarlovi/docker-hostmanager:latest
+        profiles:
+            - linux
+        restart: always
         volumes:
-            - /var/run/docker.sock:/var/run/docker.sock:ro
-            - ./etc/traefik:/etc/traefik:ro
-            - ./certs:/etc/certs:ro
-            - ./etc/traefik/config.yaml:/etc/certs/config/config.yaml:ro
-        restart: unless-stopped
-        networks:
-            - public
-networks:
-    public:
-        external: true
+            - /etc/hosts:/hosts
+            - /var/run/docker.sock:/var/run/docker.sock
